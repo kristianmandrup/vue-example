@@ -5,12 +5,12 @@ Vue.use(Router)
 
 import Home from '../components/home.vue';
 import Store from '../components/store.vue';
-import Foo from '../components/foo.vue';
+import AddUser from '../components/add-user.vue';
 
 const routes = [
   {path: '/', component: Home},
   {path: '/store', component: Store},
-  {path: '/foo', component: Foo},
+  {path: '/add-user', component: AddUser},
   {path: '*', redirect: '/'}
 ];
 
