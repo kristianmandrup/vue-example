@@ -19,6 +19,14 @@ export default {
     loadMore () {
       this.$store.dispatch('fetchUsers');
     }
+  },
+  prefetch () {
+    return this.$store.dispatch('fetchUsers');
+  },
+  beforeMount () {
+    if (!this.$store.state.users.length) {
+      return this.$store.dispatch('fetchUsers');
+    }
   }
 }
 </script>

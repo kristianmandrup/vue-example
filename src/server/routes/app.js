@@ -1,4 +1,5 @@
 const express = require('express');
+const serialize = require('serialize-javascript');
 
 /*
 * Returns a middleware for serving precompiled files.
@@ -35,6 +36,7 @@ exports.render = (req, res) => {
     res.write(chunk);
   });
   page.on('end', () => {
+    res.write(  `<script>window.__STATE__ = JSON.parse('${JSON.stringify(ctx.state)}')</script>`);
     res.write(  `<script src="${publicPath}bundle.js"></script>`);
     res.write(`</body>`);
     res.write(`</html>`);
