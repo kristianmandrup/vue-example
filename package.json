@@ -24,7 +24,8 @@
     "vue": "2.0.x",
     "vue-builder": "1.3.x",
     "vue-router": "2.0.1",
-    "vue-server-renderer": "2.0.x"
+    "vue-server-renderer": "2.0.x",
+    "vuex": "2.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
