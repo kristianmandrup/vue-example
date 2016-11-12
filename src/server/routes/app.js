@@ -1,5 +1,4 @@
 const express = require('express');
-const serialize = require('serialize-javascript');
 
 /*
 * Returns a middleware for serving precompiled files.

@@ -3,14 +3,16 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-import Home from '../components/home.vue';
-import Store from '../components/store.vue';
-import AddUser from '../components/add-user.vue';
+import HomeComponent from '../components/home.vue';
+import StoreComponent from '../components/store.vue';
+import AddUserComponent from '../components/add-user.vue';
+import ContextComponent from '../components/context.vue';
 
 const routes = [
-  {path: '/', component: Home},
-  {path: '/store', component: Store},
-  {path: '/add-user', component: AddUser},
+  {path: '/', component: HomeComponent},
+  {path: '/store', component: StoreComponent},
+  {path: '/add-user', component: AddUserComponent},
+  {path: '/context', component: ContextComponent},
   {path: '*', redirect: '/'}
 ];
 
